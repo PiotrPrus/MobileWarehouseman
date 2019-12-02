@@ -5,6 +5,6 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.mobilewarehouseman.feature.login.LoginFragment"
+        android:name="com.piotrprus.mobilewarehouseman.feature.login.LoginFragment"
         android:label="LoginFragment" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.mobilewarehouseman.feature.login
+package com.piotrprus.mobilewarehouseman.feature.login
 
 import androidx.lifecycle.ViewModel
 

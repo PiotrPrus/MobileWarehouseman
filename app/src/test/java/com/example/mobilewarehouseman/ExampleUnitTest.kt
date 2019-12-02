@@ -1,4 +1,4 @@
-package com.example.mobilewarehouseman
+package com.piotrprus.mobilewarehouseman
 
 import org.junit.Test
 

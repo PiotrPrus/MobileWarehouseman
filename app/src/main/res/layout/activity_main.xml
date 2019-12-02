@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.mobilewarehouseman.feature.main.MainViewModel" />
+            type="com.piotrprus.mobilewarehouseman.feature.main.MainViewModel" />
     </data>
 
     <FrameLayout

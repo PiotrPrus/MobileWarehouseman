@@ -1,7 +1,7 @@
-package com.example.mobilewarehouseman.feature.main
+package com.piotrprus.mobilewarehouseman.feature.main
 
-import com.example.mobilewarehouseman.R
-import com.example.mobilewarehouseman.databinding.ActivityMainBinding
+import com.piotrprus.mobilewarehouseman.R
+import com.piotrprus.mobilewarehouseman.databinding.ActivityMainBinding
 import com.piotrprus.core.base.BaseVMActivity
 import com.piotrprus.core.base.LayoutResId
 

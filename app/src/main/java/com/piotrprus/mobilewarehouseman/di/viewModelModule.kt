@@ -1,7 +1,7 @@
-package com.example.mobilewarehouseman.di
+package com.piotrprus.mobilewarehouseman.di
 
-import com.example.mobilewarehouseman.feature.login.LoginViewModel
-import com.example.mobilewarehouseman.feature.main.MainViewModel
+import com.piotrprus.mobilewarehouseman.feature.login.LoginViewModel
+import com.piotrprus.mobilewarehouseman.feature.main.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
