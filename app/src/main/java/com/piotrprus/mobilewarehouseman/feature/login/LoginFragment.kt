@@ -1,5 +1,6 @@
 package com.piotrprus.mobilewarehouseman.feature.login
 
+import android.content.Intent
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
@@ -14,27 +15,32 @@ import timber.log.Timber
 class LoginFragment : BaseVMFragment<LoginViewModel, LoginFragmentBinding>(
     LoginViewModel::class
 ) {
+    private val facebookCallback: CallbackManager by lazy { CallbackManager.Factory.create() }
+
     override fun start() {
         binding.viewModel = viewModel
-        val facebookCallback = CallbackManager.Factory.create()
-        binding.facebookLoginButton.apply {
-            fragment = this@LoginFragment
-            registerCallback(facebookCallback, object : FacebookCallback<LoginResult> {
+        binding.facebookLoginButton.fragment = this
+        binding.facebookLoginButton.registerCallback(
+            facebookCallback,
+            object : FacebookCallback<LoginResult> {
                 override fun onSuccess(result: LoginResult?) {
-                    Timber.d("AAA, Login success")
+                    Timber.d("Login success")
                 }
 
                 override fun onCancel() {
-                    Timber.d("AAA, Login cancel")
+                    Timber.d("Login cancel")
                 }
 
                 override fun onError(error: FacebookException?) {
-                    Timber.d(error, "AAA, Login success")
+                    Timber.d(error, "Login success")
                 }
 
             })
-        }
+    }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        facebookCallback.onActivityResult(requestCode, resultCode, data)
     }
 
 }
