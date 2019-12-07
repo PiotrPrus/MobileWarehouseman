@@ -1,2 +1,5 @@
-include ':app', ':core'
-rootProject.name='Mobile Warehouseman'
+include ':app', ':model'
+include ':core'
+include ':data'
+include ':domain'
+rootProject.name = 'Mobile Warehouseman'

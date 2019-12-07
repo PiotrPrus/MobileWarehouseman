@@ -3,6 +3,8 @@ package com.piotrprus.mobilewarehouseman
 import android.app.Application
 import com.facebook.FacebookSdk
 import com.facebook.appevents.AppEventsLogger
+import com.piotrprus.data.di.networkModule
+import com.piotrprus.domain.di.useCaseModule
 import com.piotrprus.mobilewarehouseman.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -21,7 +23,9 @@ class MobileWarehouseMan : Application() {
             androidLogger()
             androidContext(this@MobileWarehouseMan)
             modules(
-                viewModelModule
+                listOf(
+                    viewModelModule, useCaseModule, networkModule
+                )
             )
         }
         FacebookSdk.sdkInitialize(applicationContext)

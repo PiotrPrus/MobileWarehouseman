@@ -9,8 +9,8 @@ import com.piotrprus.core.base.LayoutResId
 class MainActivity : BaseVMActivity<MainViewModel, ActivityMainBinding>(
     MainViewModel::class) {
 
-    override fun onStart() {
-        super.onStart()
+    override fun start() {
+        super.start()
         binding.viewModel = viewModel
     }
 }
